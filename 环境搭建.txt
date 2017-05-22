@@ -1,0 +1,12 @@
+﻿学习框架？  新知识点
+
+
+按文档，先把环境弄好
+
+
+
+1-2周：  [1]搭建环境 :   1.下载相关代码以及文件    2.配置文件   3.启动 看结果
+
+下载安装以及配置
+https://wenku.baidu.com/view/d8c9cb6bbceb19e8b9f6ba08.html?from=search
+哈哈

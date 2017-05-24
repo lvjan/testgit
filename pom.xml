@@ -1,0 +1,204 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com</groupId>
+  <artifactId>webmodule</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>webmodule Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies><!--
+  
+  
+  
+	
+  junit   <scope>test</scope>这里的test表示测试时编译src/main/test文件夹中的文件，等发布的时候不编译。 最后，在src/main/test中创建me.gacl.test包，在包中编写 TestSpring类
+        --><dependency>  
+            <groupId>junit</groupId>  
+            <artifactId>junit</artifactId>  
+            <version>4.12</version>  
+            <scope>test</scope>  
+        </dependency><!--  
+  
+         spring3需要的包   maven会自动下载   这些包以及所依赖的包
+        --><dependency>  
+            <groupId>org.springframework</groupId>  
+            <artifactId>spring-core</artifactId>  
+            <version>3.2.3.RELEASE</version>  
+        </dependency>  
+  
+        <dependency>  
+            <groupId>org.springframework</groupId>  
+            <artifactId>spring-beans</artifactId>  
+            <version>3.2.3.RELEASE</version>  
+        </dependency>  
+  
+        <dependency>  
+            <groupId>org.springframework</groupId>  
+            <artifactId>spring-context</artifactId>  
+            <version>3.2.3.RELEASE</version>  
+        </dependency>  
+  
+        <dependency>  
+            <groupId>org.springframework</groupId>  
+            <artifactId>spring-tx</artifactId>  
+            <version>3.2.3.RELEASE</version>  
+        </dependency>  
+  
+        <dependency>  
+            <groupId>org.springframework</groupId>  
+            <artifactId>spring-web</artifactId>  
+            <version>3.2.3.RELEASE</version>  
+        </dependency>  
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>3.2.3.RELEASE</version>
+		</dependency>
+
+  
+        <dependency>  
+            <groupId>org.springframework</groupId>  
+            <artifactId>spring-test</artifactId>  
+            <version>3.2.3.RELEASE</version>  
+            <scope>test</scope>  
+        </dependency><!--  
+		
+		   使用SpringMVC需配置   
+        --><dependency>  
+            <groupId>org.springframework</groupId>  
+            <artifactId>spring-webmvc</artifactId>  
+            <version>3.2.3.RELEASE</version>  
+        </dependency><!--  
+		
+		 关系型数据库整合时需配置 如hibernate jpa等   
+        --><dependency>  
+            <groupId>org.springframework</groupId>  
+            <artifactId>spring-orm</artifactId>  
+            <version>3.2.3.RELEASE</version>  
+        </dependency><!--  
+  
+         hibernate   
+
+        --><dependency>  
+            <groupId>org.hibernate</groupId>  
+            <artifactId>hibernate-core</artifactId>  
+            <version>4.1.6.Final</version>  
+        </dependency>  
+    
+           <dependency>  
+            <groupId>org.hibernate</groupId>  
+            <artifactId>hibernate-ehcache</artifactId>  
+            <version>4.2.21.Final</version>  
+        </dependency>  
+  
+        <!-- 二级缓存ehcache -->  
+        <dependency>  
+            <groupId>net.sf.ehcache</groupId>  
+            <artifactId>ehcache</artifactId>  
+            <version>2.9.0</version>  
+        </dependency><!--
+	
+		aspectjweaver包 
+			--><dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjweaver</artifactId>
+				<version>1.8.5</version>
+			</dependency><!--
+			
+	 servlet   
+        --><dependency>  
+            <groupId>javax.servlet</groupId>  
+            <artifactId>servlet-api</artifactId>  
+            <version>3.0-alpha-1</version>  
+            <scope>provided</scope>  
+        </dependency>  
+  
+        <dependency>  
+            <groupId>javax.servlet</groupId>  
+            <artifactId>jstl</artifactId>  
+            <version>1.2</version>  
+        </dependency><!--  
+	
+ mysql数据库驱动 https://mvnrepository.com/artifact/mysql/mysql-connector-java 
+--><dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>5.1.18</version>
+</dependency><!--
+
+
+	
+ 日志log4j https://mvnrepository.com/artifact/log4j/log4j 
+
+--><dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.16</version>
+</dependency><!--
+
+	
+	 数据库连接池druid https://mvnrepository.com/artifact/com.alibaba/druid 
+--><dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>druid</artifactId>
+    <version>1.0.20</version>
+</dependency>
+	
+	
+  
+		
+		
+		<!-- 文件上传需要的jar包 -->  
+        <dependency>  
+            <groupId>commons-fileupload</groupId>  
+            <artifactId>commons-fileupload</artifactId>  
+            <version>1.2.1</version>  
+        </dependency>  
+  
+        <dependency>  
+            <groupId>commons-io</groupId>  
+            <artifactId>commons-io</artifactId>  
+            <version>1.4</version>  
+        </dependency>  
+		
+		
+		<dependency>  
+            <groupId>javax.servlet.jsp</groupId>  
+            <artifactId>jsp-api</artifactId>  
+            <version>2.2</version>  
+            <type>jar</type>  
+        </dependency>  
+		
+		 <!-- json -->  
+        <dependency>  
+            <groupId>com.alibaba</groupId>  
+            <artifactId>fastjson</artifactId>  
+            <version>1.2.3</version>  
+        </dependency>  
+  
+        <dependency>  
+            <groupId>com.fasterxml.jackson.core</groupId>  
+            <artifactId>jackson-annotations</artifactId>  
+            <version>2.7.3</version>  
+        </dependency>  
+  
+        <dependency>  
+            <groupId>com.fasterxml.jackson.core</groupId>  
+            <artifactId>jackson-core</artifactId>  
+            <version>2.7.3</version>  
+        </dependency>  
+  
+        <dependency>  
+            <groupId>com.fasterxml.jackson.core</groupId>  
+            <artifactId>jackson-databind</artifactId>  
+            <version>2.7.3</version>  
+        </dependency>  
+        
+  
+  </dependencies>
+  <build>
+    <finalName>webmodule</finalName>
+  </build>
+</project>
